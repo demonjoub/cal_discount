@@ -1,0 +1,57 @@
+/* Empty. Add your own CSS if you like */
+/* header */
+h1.title center{
+    font-size: 20px;
+    text-align: center;
+    color: floralwhite;
+}
+/* box */
+div.show_price {
+    border:5px solid #4FFFA1;
+    height: 120px;
+    
+/*    line-height: 90px;*/
+}
+div.new_price {
+    position: relative; 
+    left: 50%; /*100px; */
+    margin-left: -50px;
+/*    width:auto;*/
+/*    border:5px solid #CCCCCC;*/
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: greenyellow;
+}
+div.original_price {
+    position: relative; 
+    left: 100px; 
+    width:200px; 
+/*    border:5px solid #4FFFA1;*/
+    width:auto;
+    z-index: -1;
+    color: red;
+    text-decoration: line-through;
+    font-size: 18px;
+    
+    margin-top: 7px;
+    font-weight: normal;
+}
+div.sale_off {
+    position: relative; 
+    left: 100px; 
+    width:200px; 
+/*    border:5px solid #ee3e64;*/
+    font-size: 18px;
+    color: black;
+    font-weight: normal;
+}
+div.save {
+    position: relative; 
+    left: 100px; 
+    width:200px; 
+/*    border:5px solid #ee3e64;*/
+    font-size: 14px;
+    color: gray;
+    font-weight: normal;
+}

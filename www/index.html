@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-controller="MainCtrl">
+
+    <ion-pane>
+        <!-- header -->
+      <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title"><center>% Discount Calculator</center></h1>
+      </ion-header-bar>
+        <!-- centent area -->
+      <ion-content>
+        <div>  
+            <!--<div id="price"> <p class="save_price">{{doCalculation().toFixed(2)}}</p> 
+                <div id="saveOff"> <p class="sale_off"> Sale {{showDiscount()}}% Off</p>
+                    
+                </div>
+            </div>-->
+            <div class="show_price">
+                <div class="new_price">{{doCalculation().toFixed(2)}} 
+                    <div class="original_price">{{showOriginalPrice().toFixed(2)}}</div>
+                    <div class="sale_off">{{showDiscount()}}% OFF</div>
+                    <div class="save">Save {{showSavePrice().toFixed(2)}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="list">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Price($)</span>
+            <input type="number" placeholder="Price" pattern="[0-9]*" ng-model="data.price">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Discount(%)</span>  
+            <input type="number" placeholder="Discount" pattern="[0-9]*" ng-model="data.discount" name="discount">
+          </label>
+          <!-- checkbox -->
+          <li class="item item-toggle">
+             Tax(%)
+             <label class="toggle toggle-positive">
+               <input type="checkbox" ng-change="taxChange()" ng-model="tax.checked" name="userTax" >
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+          <label ng-show="tax.checked" class="item item-input item-stacked-label">
+              <input type="number" placeholder="Tax" pattern="[0-9]*" ng-model="data.tax">
+          </label>
+            <!--<input type="checkbox" ng-model="user.agree" name="userAgree" required="" />
+
+    I agree:-->
+            
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
